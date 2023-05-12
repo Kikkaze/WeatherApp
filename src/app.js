@@ -49,7 +49,7 @@ function searchWeather(event) {
   search(cityInputElement.value);
 }
 
-search("San Francisco");
-
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", searchWeather);
+
+search("San Francisco");
