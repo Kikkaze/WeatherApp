@@ -33,10 +33,23 @@ function showTemperature(response) {
     "src",
     `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
   );
+  iconElement.setAttribute("alt", response.data.condition.description);
 }
 
-let apiKey = "368a5t8b9e10a64e78c55aob0f467b4c";
-let city = "San Francisco";
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
+function search(city) {
+  let apiKey = "368a5t8b9e10a64e78c55aob0f467b4c";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
 
-axios.get(apiUrl).then(showTemperature);
+  axios.get(apiUrl).then(showTemperature);
+}
+
+function searchWeather(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
+
+search("San Francisco");
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", searchWeather);

@@ -48,3 +48,7 @@ footer {
 .following-days {
   margin-top: 20px;
 }
+
+.search-form {
+  border-width: 2px;
+}
