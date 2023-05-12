@@ -28,7 +28,7 @@ footer {
   font-size: small;
 }
 
-#weatherDescription {
+#weatherDescription:first-letter {
   text-transform: capitalize;
 }
 
