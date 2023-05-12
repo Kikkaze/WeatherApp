@@ -28,6 +28,10 @@ footer {
   font-size: small;
 }
 
+#weatherDescription {
+  text-transform: capitalize;
+}
+
 .weatherAppWrapper {
   max-width: 700px;
   margin: 50px auto;
