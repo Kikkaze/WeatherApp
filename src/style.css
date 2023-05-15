@@ -1,16 +1,19 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
 }
 
 h1 {
-  color: rgb(129, 129, 129);
+  color: rgb(247, 208, 96);
   font-size: 40px;
   font-weight: 500;
+  margin-left: 10px;
+  margin-top: 30px;
 }
 
 h2 {
   color: rgb(129, 129, 129);
-  line-height: 64px;
+  line-height: 100px;
   margin: 0 10px;
 }
 
@@ -28,27 +31,54 @@ footer {
   font-size: small;
 }
 
-#weatherDescription:first-letter {
-  text-transform: capitalize;
+.cat {
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+  left: 500px;
+  top: 30px;
+  z-index: 2;
+}
+
+#city-input {
+  border: none;
+}
+.left-ul {
+  margin-left: 10px;
+}
+
+.search-button {
+  background-color: rgb(255, 255, 255);
+  border: none;
+  color: black;
+}
+
+.search-button:hover {
+  background-color: rgb(247, 208, 96);
+  color: white;
+}
+
+.search-form {
+  border-width: 2px;
 }
 
 .weatherAppWrapper {
   max-width: 700px;
-  margin: 50px auto;
+  margin: 175px auto;
+  z-index: 1;
 }
 
 .weatherApp {
   max-width: 700px;
   margin: 50px auto 10px;
-  padding: 20px;
-  border: 2px solid rgba(0, 0, 0, 0.1);
+  padding-top: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
   border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
-.following-days {
-  margin-top: 20px;
-}
-
-.search-form {
-  border-width: 2px;
+#weatherDescription:first-letter {
+  text-transform: capitalize;
 }
