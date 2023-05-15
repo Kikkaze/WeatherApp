@@ -16,15 +16,23 @@
   </head>
   <body>
     <div class="container">
+      <img
+        class="cat"
+        id="cat"
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/082/154/original/tommy-awaken.png?1684180607"
+        alt="Black and white cat"
+        width="400px"
+      />
       <div class="weatherAppWrapper">
         <div class="weatherApp">
           <form id="search-form" class="mb-3">
             <div class="row">
               <div class="col-9">
                 <input
+                  autofocus="on"
                   type="search"
                   placeholder="Type a city..."
-                  class="form-control search-form"
+                  class="form-control search-form search-bar"
                   id="city-input"
                 />
               </div>
@@ -32,7 +40,7 @@
                 <input
                   type="submit"
                   value="search"
-                  class="btn btn-success w-100"
+                  class="btn btn-success w-100 search-button"
                 />
               </div>
             </div>
@@ -45,13 +53,12 @@
               id="mainIcon"
             />
             <h2>
-              <span id="temperature"> 10</span>°
-              <span class="units">C / <a href="#">F</a></span>
+              <span id="temperature">10</span>°<span class="units">C</span>
             </h2>
           </div>
           <div class="row">
             <div class="col-6">
-              <ul>
+              <ul class="left-ul">
                 <li id="weekday">Thursday</li>
                 <li id="date">11 May, 2023</li>
                 <li id="weatherDescription">Cloudy</li>
