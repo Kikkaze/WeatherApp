@@ -47,12 +47,12 @@ footer {
 .forecast {
   color: rgb(129, 129, 129);
   font-size: 15px;
-  padding-top: 20px;
+  padding-top: 40px;
   text-align: center;
 }
 
 #forecast-icon {
-  width: 40px;
+  width: 50px;
 }
 
 .left-ul {
