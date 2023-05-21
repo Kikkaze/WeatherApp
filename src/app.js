@@ -79,7 +79,6 @@ function showForecast(response) {
 }
 
 function getForecast(coordinates) {
-  console.log(coordinates);
   let apiKey = "368a5t8b9e10a64e78c55aob0f467b4c";
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${coordinates.longitude}&lat=${coordinates.latitude}&key=${apiKey}`;
   axios.get(apiUrl).then(showForecast);
@@ -108,6 +107,7 @@ function showTemperature(response) {
   iconElement.setAttribute("alt", response.data.condition.description);
 
   getForecast(response.data.coordinates);
+  showForecast();
 }
 
 function search(city) {
@@ -127,5 +127,3 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", searchWeather);
 
 search("San Francisco");
-
-showForecast();
